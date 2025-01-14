@@ -1,0 +1,566 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\ASIA TECH\Desktop\leisur hotel\css\style.css">
+    <!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
+    <script src="C:\Users\ASIA TECH\Desktop\leisur hotel\index.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Liesur Hotel</title>
+</head>
+<body>
+    <!--<nav class="navbar">
+      <div class="nav__logo">
+        <h1>Liesur Hotels</h1>
+        <span style="font-size: 15px; color: rgba(102, 88, 7, 0.712);">Experience 'more'</span>
+    </div>
+        <ul class="navbar-links">
+          <li class="dropdown">
+            <a href="#">Our Location</a>
+            <div class="dropdown-menu">
+              <a href="#">Location 1</a>
+              <a href="#">Location 2</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Offers and Promotions</a>
+            <div class="dropdown-menu">
+              <a href="#">Offer 1</a>
+              <a href="#">Offer 2</a>
+            </div>
+          </li>
+          <li><a href="#">Wedding & Offsites</a></li>
+          <li><a href="#">Dining</a></li>
+          <button class="menu-button">
+            <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\menu.png" alt="Menu Icon" class="menu-icon">
+          </button>
+          <ul class="menu-dropdown">
+            <li><a href="#">Our Experience</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">New Launches</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+          <li class="book-now"><a href="#">Book Now</a></li>
+        </ul>
+      </nav>-->
+
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\lg.jpeg" alt="Leisure Hotels Logo">
+          <div class="logo-text">
+            <h1>LEISURE HOTELS</h1>
+            <p>experience 'more'</p>
+          </div>
+        </div>
+      
+        <ul class="navbar-links">
+          <!--<li><a href="#">OUR LOCATIONS <span>&#9660;</span></a></li>-->
+          <li class="dropdown">
+            <a href="#" id="locationToggle">OUR LOCATIONS <span>&#9660;</span></a>
+            <div class="dropdown-menu" id="locationMenu">
+              <div class="location-columns">
+                <ul>
+                  <li>Bareilly</li>
+                  <li>Bhimtal</li>
+                  <li>Corbett</li>
+                  <li>Dehradun</li>
+                  <li>Dharamshala</li>
+                  <li>Goa</li>
+                  <li>Greater Noida</li>
+                </ul>
+                <ul>
+                  <li>Haridwar</li>
+                  <li>Kanatal</li>
+                  <li>Kausani</li>
+                  <li>Kasauli</li>
+                  <li>Kashipur</li>
+                  <li>Manali</li>
+                  <li>Mcleodganj</li>
+                </ul>
+                <ul>
+                  <li>Nainital</li>
+                  <li>Ramgarh</li>
+                  <li>Rishikesh</li>
+                  <li>Varanasi</li>
+                  <li>Vrindavan</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          
+
+
+          <li><a href="#">OFFERS & PROMOTIONS <span>&#9660;</span></a></li>
+          <li><a href="#">WEDDINGS & OFFSITES</a></li>
+          <li><a href="#">DINING</a></li>
+          <li>
+            <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\menu.png" alt="Menu Icon" class="menu-button-icon" onclick="toggleDropdown()">
+            <div class="menu-dropdown" id="dropdownMenu">
+              <a href="#">OUR EXPERIENCES</a>
+              <a href="#">CONTACT US</a>
+              <a href="#">NEW LAUNCHES</a>
+              <a href="#">MEDIA</a>
+            </div>
+          </li>
+        </ul>
+
+        <button class="menu-button">
+          <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\menu.png" alt="Menu Icon" class="menu-icon">
+        </button>
+        <ul class="menu-dropdown">
+          <li><a href="#">Our Experience</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">New Launches</a></li>
+          <li><a href="#">Media</a></li>
+        </ul>
+      
+        <div class="navbar-right">
+          <div class="menu-icon">&#9776;</div>
+          <a href="#" class="book-now">BOOK NOW</a>
+        </div>
+      </nav>
+      
+
+      <header>
+        <div class="video-section">
+          <video autoplay muted loop>
+            <source src="C:\Users\ASIA TECH\Desktop\La vida project\vedio2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </header>
+      
+
+
+      <div class="booking-section">
+    <div class="item">
+        <label for="destination">Select Your Destination</label>
+        <select id="destination" name="destination">
+            <option value="" disabled selected>Choose...</option>
+            <option value="paris">Paris</option>
+            <option value="new-york">New York</option>
+            <option value="tokyo">Tokyo</option>
+        </select>
+    </div>
+    <div class="vertical-line"></div>
+    <div class="item">
+        <label for="hotel">Select Your Hotel</label>
+        <select id="hotel" name="hotel">
+            <option value="" disabled selected>Choose...</option>
+            <option value="aria">Aria Hotel</option>
+            <option value="grand">Grand Hotel</option>
+            <option value="plaza">Plaza Resort</option>
+        </select>
+    </div>
+    <div class="vertical-line"></div>
+    <div class="item">
+        <label for="check-in">Check In</label>
+        <input type="date" id="check-in" name="check-in">
+    </div>
+    <div class="vertical-line"></div>
+    <div class="item">
+        <label for="check-out">Check Out</label>
+        <input type="date" id="check-out" name="check-out">
+    </div>
+    <div class="item book-nows">
+        <button type="submit">Book Now</button>
+    </div>
+</div>
+
+
+<div class="about-section">
+  <h1>ABOUT US</h1>
+  <div class="about-paragraphs">
+    <p>Leisure Hotels Group.</p>
+    <p class="sec-para">35 Years of Crafting Experiential Journeys.</p>
+    <p class="stretched">Leisure Hotels Group, the leading resort chain across North India Uttarakhand.</p>
+    <p class="small-font">With 30 handpicked properties, we offer a diverse range of experiences, from adventure and wilderness to spirituality and leisure. Whether it’s boutique resorts, smart business hotels, sociotels, or bespoke villas, our group is dedicated to upholding the timeless values of warm hospitality, serving our guests, stakeholders, and the community with unwavering commitment.</p>
+  </div>
+</div>
+
+<div class="button-container">
+  <button class="more-button">LEARN MORE</button>
+</div>
+
+
+<div class="experience-section">
+  <h2 class="experience-heading">EXPERIENCES</h2>
+  <div class="experience-paragraphs">
+    <p>An Unmatched Holiday.</p>
+    <p>Experience At Leisure Hotels.</p>
+  </div>
+  
+  <div class="image-carousel">
+    <button class="arrow left-arrow">&lt;</button>
+    <div class="image-wrapper">
+      <div class="image-item">
+        <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\adventure.jpg" alt="Image 1">
+        <div class="image-content">
+          <h3>Adventure</h3>
+          <p>An adventure is an exciting experience or undertaking that is typically bold, sometimes risky.</p>
+          <button class="discover-btn">Discover</button>
+        </div>
+      </div>
+      <div class="image-item">
+        <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\spr.jpg" alt="Image 2">
+        <div class="image-content">
+          <h3>Spritual</h3>
+          <p>Spiritual means relating to a person's thoughts and beliefs, rather than their physical surroundings.</p>
+          <button class="discover-btn">Discover</button>
+        </div>
+      </div>
+      <div class="image-item">
+        <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\spa.jpg" alt="Image 2">
+        <div class="image-content">
+          <h3>Spa & Wellness</h3>
+          <p>Spas and wellness facilities are places that offer services to help people improve their health and well-being.</p>
+          <button class="discover-btn">Discover</button>
+        </div>
+      </div>
+      <div class="image-item">
+        <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\wild.jpg" alt="Image 2">
+        <div class="image-content">
+          <h3>Wilderness</h3>
+          <p>A wilderness is an area of land that has been largely undisturbed by modern human development.</p>
+          <button class="discover-btn">Discover</button>
+        </div>
+      </div>
+      <!-- Add more image items as needed -->
+    </div>
+    <button class="arrow right-arrow">&gt;</button>
+  </div>
+</div>
+
+<div class="dots-wrapper">
+  <span class="dot active"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+
+
+<!--<div class="new-beginning-section">
+  <h1 class="center-heading">NEW BEGINNING</h1>
+  <p class="center-paragraph">Excellent Stay Options At.</p>
+  <p class="center-paragraph">Various Destinations.</p>
+  <p class="small-center-paragraph">Leisure Hotels Group boasts a diverse portfolio of smart hotels, boutique resorts, sociotels and bespoke villas. Strategically positioned in the state's premier tourist and picturesque locales, our properties promise unparalleled adventures in leisure, adventure, wilderness, and spirituality..</p>
+
+  <div class="carousel">
+    <button class="carousel-arrow left-arrow">&#8249;</button>
+    <div class="carousel-images">
+      <div class="carousel-item">
+        <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\555513595.jpg" alt="Image 1">
+        <p class="image-caption">Baikunth Resort <span>Kasauli</span></p>
+      </div>
+      <div class="carousel-item">
+        <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\555513595.jpg" alt="Image 2">
+        <p class="image-caption">Bedz Exclusiv <span>Morjim,Goa</span></p>
+      </div>
+      <div class="carousel-item">
+        <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\555513595.jpg" alt="Image 3">
+        <p class="image-caption">Brij Eternity <span>Vrindavan</span></p>
+      </div>
+      <div class="carousel-item">
+        <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\555513595.jpg" alt="Image 3">
+        <p class="image-caption">Monotoria Retreate <span>Bhimtal</span></p>
+      </div>
+      <div class="carousel-item">
+        <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\555513595.jpg" alt="Image 3">
+        <p class="image-caption">Avalon Cottages <span>Kanatal</span></p>
+      </div>
+    </div>
+    <button class="carousel-arrow right-arrow">&#8250;</button>
+  </div>
+</div>-->
+
+
+  <div class="container py-5 new-beginning-section">
+    <!-- Heading Section -->
+    <h1 class="text-center text-uppercase text-primary mb-3">New Beginning</h1>
+    <p class="text-center h5 mb-2">Excellent Stay Options At.</p>
+    <p class="text-center h5 mb-4">Various Destinations.</p>
+    <p class="text-center small text-muted mb-5">
+      Leisure Hotels Group boasts a diverse portfolio of smart hotels, boutique resorts, sociotels, and bespoke villas. Strategically positioned in the state's premier tourist and picturesque locales, our properties promise unparalleled adventures in leisure, adventure, wilderness, and spirituality.
+    </p>
+  
+    <!-- Carousel Section -->
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Carousel Items -->
+      <div class="carousel-inner">
+        <!-- Item 1 -->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card bg-dark text-white">
+                <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\pexels-ingo-87378.jpg" class="card-img" alt="Bedzzz Xclusiv Baikunth">
+                <div class="card-img-overlay d-flex align-items-end">
+                  <div>
+                    <h5 class="card-title">Bedzzz Xclusiv Baikunth</h5>
+                    <p class="card-text">Manali</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card bg-dark text-white">
+                <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\pexels-markusspiske-97047.jpg" class="card-img" alt="Avalon Cottages">
+                <div class="card-img-overlay d-flex align-items-end">
+                  <div>
+                    <h5 class="card-title">Avalon Cottages</h5>
+                    <p class="card-text">Kanatal</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card bg-dark text-white">
+                <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\pexels-parimoofarhaan-26730732.jpg" class="card-img" alt="Bedzzz Xclusiv Ikshana Luxe">
+                <div class="card-img-overlay d-flex align-items-end">
+                  <div>
+                    <h5 class="card-title">Bedzzz Xclusiv Ikshana Luxe</h5>
+                    <p class="card-text">Nainital</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card bg-dark text-white">
+                <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\pexels-pixabay-417344.jpg" class="card-img" alt="Auradoon">
+                <div class="card-img-overlay d-flex align-items-end">
+                  <div>
+                    <h5 class="card-title">Auradoon</h5>
+                    <p class="card-text">(Coming Soon)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+  
+        <!-- Add more items here if needed -->
+      </div>
+  
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  
+
+
+
+<!-- Heading and Subheading -->
+<div class="text-center my-5">
+  <h1>DINING SPACES</h1>
+  <p>Experience the Best of Local & Global Cuisine at Leisure Hotels Group</p>
+</div>
+
+<!-- Carousel -->
+<div id="diningCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#diningCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#diningCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#diningCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- Carousel Items -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\d1.jpg" class="d-block w-100" alt="Dining Image 1">
+    </div>
+    <div class="carousel-item">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\d2.jpg" class="d-block w-100" alt="Dining Image 2">
+    </div>
+    <div class="carousel-item">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\d3.jpg" class="d-block w-100" alt="Dining Image 3">
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#diningCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#diningCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<section class="events-section">
+  <h2 class="events-title">EVENTS</h2>
+  <p class="events-para">Weddings & Events at Leisure Hotels</p>
+  <div class="events-gallery">
+    <div class="event-item">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\w1.jpg" alt="Event 1">
+    </div>
+    <div class="event-item">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\w2.jpg" alt="Event 2">
+    </div>
+    <div class="event-item">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\w3.jpg" alt="Event 3">
+    </div>
+  </div>
+  <p class="events-description">
+    Elevate your special day with bespoke weddings at leisure hotels. Stunning venues and tailored experiences guarantee an unforgettable celebration.
+  </p>
+  <button class="learn-more-btn">Learn More</button>
+</section>
+
+<!--tags-->
+
+<section class="hotel-experience">
+  <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\line-1602152758.png" alt="The Manor Bareilly">
+  <h2>A Leisure Hotels Experience</h2>
+  <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\line-1602152758.png" alt="The Manor Bareilly">
+
+
+  <!-- Resorts Section -->
+  <div class="category">
+    <h3>RESORTS</h3>
+    <div class="logos">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Brij_hdrutq.avif" alt="Baikunth">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Brij_hdrutq.avif" alt="Brij Eternity">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\The_Leisure_Club_Logo_e3c5j1_pwjfad_dbuuyu.avif" alt="The Belvedere">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Mountoria_ywp6l2.avif" alt="Mountoria Retreat">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\The_Earl_s_Court_Nanital_Hotel_pf6etk-removebg-preview.avif" alt="The Earls Court">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Fishermens_bb3atv.avif" alt="Fishermen's Lodge">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Atman_qewkdi.avif" alt="Atman">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\The_Haveli_Hari_Ganga_v8mxfm.avif" alt="Svaasa">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\The_Riverview_Retreat_apshey.avif" alt="Sun 'n Snow Inn">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Atman_qewkdi.avif" alt="Atman">
+
+    </div>
+  </div>
+
+  <!-- Sociotels Section -->
+  <div class="category">
+    <h3>SOCIOTELS</h3>
+    <div class="logos">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Bedzz_Rishikesh_uo5tgd.avif" alt="Bedzzz Rishikesh">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Bedzz_Varansi_qsh67d.avif" alt="Bedzzz Varanasi">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Bedzz_nainital_adthpm.avif" alt="Bedzzz Nainital">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Bedzz_Manali_fxip7p.avif" alt="Bedzzz Xclusiv">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Bedzz_Manali_fxip7p.avif" alt="Bedzzz Xclusiv">
+       </div>
+  </div>
+
+  <!-- Hotels Section -->
+  <div class="category">
+    <h3>HOTELS</h3>
+    <div class="logos">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\line-1602152758.png" alt="The Manor Bareilly">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Manor_Bareilly_djqxa5_xvd7qz_xongns.avif" alt="The Manor Bareilly">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\line-1602152758.png" alt="The Manor Bareilly">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\line-1602152758.png" alt="The Manor Bareilly">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Manor_Kashipur_yltcpk_z93akc_abtzwv.avif" alt="The Manor Kashipur">
+    </div>
+  </div>
+
+  <!-- Villas / Cottages Section -->
+  <div class="category">
+    <h3>VILLAS / COTTAGES</h3>
+    <div class="logos">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Bungalows_Logo_PDF_page-0001__1__copy-removebg-preview.avif" alt="The Bungalows">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Jamoon_bqkjfa.avif" alt="Jamoon">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Avlon_sv3rm3.avif" alt="Avalon Cottages">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Pinewood_Logo_hlr6ph.avif" alt="The Pinewood">
+      <img src="C:\Users\ASIA TECH\Desktop\leisur hotel\images\New folder\Group_827__1_-removebg-preview_zjv9gv.avif" alt="The Pinewood">
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!--Footer-->
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-item">
+      <h3>Contact Us</h3>
+      <div class="contact-info">
+        <i class="fas fa-phone"></i>
+        <span>+91 95 5508 8000 | Phone</span>
+      </div>
+    </div>
+
+    <div class="footer-item middle">
+      <div class="contact-info">
+        <i class="fas fa-envelope"></i>
+        <span>bookings@leisurehotels.in</span>
+      </div>
+    </div>
+
+    <div class="footer-item">
+      <h3>Get In Touch</h3>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="footer-links">
+    <ul>
+      <li>Home</li>
+      <li>Destinations</li>
+      <li>Offers & Promotions</li>
+      <li>New Launches</li>
+      <li>Media</li>
+      <li>About Us</li>
+      <li>Careers</li>
+      <li>The Leisure Club</li>
+      <li>Partner With Us</li>
+      <li>Privacy Policy</li>
+      <li>Terms of Use</li>
+      <li>Newsletter</li>
+      <li>Reservation Policies</li>
+      <li>Blogs</li>
+      <li>Best Resorts in Rishikesh</li>
+      <li>Dining</li>
+    </ul>
+    <p>Sitemap | Simplotel - Hotel Website Design & Booking Engine</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+    
+      
+</body>
+</html>
